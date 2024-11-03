@@ -35,6 +35,7 @@ jobs:
     - name: Commit files
       run: |
         git add contrib.txt
+        git commit -m "✨NEW CONTRIBUTION✨"
 
     - name: Push changes
       run: |
