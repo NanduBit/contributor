@@ -6,7 +6,7 @@ on:
     - cron: '0 * * * *' # Run every 1 hours
 
 jobs:
-  fetch_and_update:
+  contributor:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
@@ -28,7 +28,6 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt  # If you have a requirements.txt file
 
     - name: Run Python script
       run: python main.py  # Runs the main.py script
