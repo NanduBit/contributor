@@ -1,3 +1,6 @@
+<p align="center">
+  <img width="150px" src="./images/cover.png">
+</p>
 <h1 align="center">👾 • Contributor</h1>
 
 This repository allows you to automatically populate your GitHub contribution chart with incremental contributions. Each time the workflow runs, it updates a contribution counter and commits the change, effectively filling up your contribution graph on GitHub.
