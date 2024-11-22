@@ -55,7 +55,15 @@ This is essential to commit code as you.
    - `GH_EMAIL` – Your GitHub email address (e.g., `yourname@example.com`).
    - `GH_USERNAME` – Your GitHub username (e.g., `yourname`).
 
-### 6. **Run the Workflow**
+### 6. **Allow the Action to Make Changes**
+
+To Allow the Action to commit changes as you, You can allow this settings at **Settings** > **Actions** > **General** > **Workflow permission**.:
+
+![](./images/perm.png)
+
+### `GIT_EMAIL` 📧
+
+### 7. **Run the Workflow**
 
 Once everything is set up, you can trigger the workflow in two ways:
 
