@@ -3,7 +3,7 @@ name: Contribute
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 * * * *' # Run every 1 hours
+    - cron: '0 * * * *' # Run every hour
 
 jobs:
   contributor:
@@ -20,19 +20,12 @@ jobs:
         git config --local user.email "$GITHUB_EMAIL"
         git config --local user.name "$GITHUB_USERNAME"
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.13'  
-
-    - name: Install dependencies
+    - name: Append text to file
       run: |
-        python -m pip install --upgrade pip
+        echo "1" >> contrib.txt
+        echo "Text appended to contrib.txt"
 
-    - name: Run Python script
-      run: python main.py  # Runs the main.py script
-
-    - name: Commit files
+    - name: Commit changes
       run: |
         git add contrib.txt
         git commit -m "✨NEW CONTRIBUTION✨"
