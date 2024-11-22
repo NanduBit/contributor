@@ -6,6 +6,12 @@
 This repository allows you to automatically populate your GitHub contribution chart with incremental contributions. Each time the workflow runs, it updates a contribution counter and commits the change, effectively filling up your contribution graph on GitHub.
 By forking this repository and setting up the workflow, you'll be able to increase your contribution without manually committing code.
 
+Result:
+<p align="center">
+  <img width="" src="./images/you.jpeg">
+</p>
+
+
 ## Forking the Repository
 
 Follow these steps to fork the repository and set it up for your own use:
