@@ -34,29 +34,10 @@ jobs:
 
         echo "Updated contrib.txt with value: $next"
 
-    - name: Determine commit message
-      id: commit_msg
-      run: |
-        # Determine the suffix (st, nd, rd, th) for the contribution number
-        case $((next % 10)) in
-          1) suffix="st" ;;
-          2) suffix="nd" ;;
-          3) suffix="rd" ;;
-          *) suffix="th" ;;
-        esac
-        
-        # Special cases for 11th, 12th, and 13th
-        if [ $((next % 100)) -ge 11 ] && [ $((next % 100)) -le 13 ]; then
-          suffix="th"
-        fi
-        
-        # Form the commit message
-        echo "message=${next}${suffix} contribution" >> $GITHUB_ENV
-
     - name: Commit changes
       run: |
         git add contrib.txt
-        git commit -m "${{ env.message }}"
+        git commit -m "✨ $(cat contrib.txt) Contribution So Far✨"
 
     - name: Push changes
       run: |
