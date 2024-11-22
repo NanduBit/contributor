@@ -20,15 +20,24 @@ jobs:
         git config --local user.email "$GITHUB_EMAIL"
         git config --local user.name "$GITHUB_USERNAME"
 
-    - name: Append text to file
+    - name: Update contrib.txt
       run: |
-        echo "1" >> contrib.txt
-        echo "Text appended to contrib.txt"
+        # Check if contrib.txt exists; if not, initialize it with 0
+        if [ ! -f contrib.txt ]; then
+          echo "0" > contrib.txt
+        fi
+        
+        # Read the current value, increment it, and overwrite the file
+        current=$(cat contrib.txt)
+        next=$((current + 1))
+        echo $next > contrib.txt
+
+        echo "Updated contrib.txt with value: $next"
 
     - name: Commit changes
       run: |
         git add contrib.txt
-        git commit -m "✨NEW CONTRIBUTION✨"
+        git commit -m "✨ $(cat contrib.txt)th Contribution ✨"
 
     - name: Push changes
       run: |
