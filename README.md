@@ -67,7 +67,6 @@ To Allow the Action to commit changes as you, You can allow this settings at **S
 
 ![](./images/perm.png)
 
-### `GIT_EMAIL` 📧
 
 ### 7. **Run the Workflow**
 
