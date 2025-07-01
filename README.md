@@ -78,7 +78,7 @@ Once everything is set up, you can trigger the workflow in two ways:
    - Click **Run workflow**.
 
 2. **Scheduled**:
-   - The workflow is set to run every hour automatically, thanks to the cron schedule (`0 * * * *`).
+   - The workflow is set to run every 2 hours automatically, thanks to the cron schedule (`0 */2 * * *`).
 
 The workflow will increment the value in `contrib.txt` each time it runs, and the commit message will reflect the incremented contribution count.
 
